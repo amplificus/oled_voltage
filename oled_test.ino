@@ -2,11 +2,10 @@
 #include <wire.h>
 #include <arduino.h>
 
-
+U8G2_SSD1306_128X64_NONAME_2_HW_I2C u8g2(U8G2_R0, SCL, SDA, /* cs=*/ 10, /*dc=*/ 9, RST);
 void setup(void) {
   u8g2.begin();
 }
-
 void loop(void) {
   u8g2.firstPage();
   do {
@@ -17,7 +16,7 @@ void loop(void) {
 }
 
 /*
-U8G2_SSD1306_128X64_NONAME_2_HW_I2C(U8G2_R0,SCL,SDA);  
+  
 
 void draw(void) {
   // graphic commands to redraw the complete screen should be placed here
